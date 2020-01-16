@@ -10,10 +10,14 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css" />
     <title>Name day</title>
   </head>
   <body>
+
+    <h1>Name day</h1>
     <div class="container">
       <div id="nameday">
         <form id="search-form">
@@ -33,6 +37,49 @@
               value="🔍"
             />
           </div>
+        </form>
+
+        <div
+          id="search-results"
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-3"
+        >
+          <!-- <div class="col mb-4">
+            <div class="card bg-light text-dark">
+              <img src="assets/images/color2.jpg" class="card-img-top" />
+              <div class="card-body details">
+                <h5 class="card-title">6 February</h5>
+                <p class="card-text">Dorotea, Doris</p>
+                <p class="card-text">Sweden</p>
+              </div>
+            </div>
+          </div> -->
+
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Sökfält i container för att kunna söka på specifikt land. -->
+
+    <div class="container">
+      <div id="nameday">
+        <form id="search-form">
+          <div id="query-wrapper">
+            <input
+              type="text"
+              id="query"
+              name="query"
+              class="form-control"
+              placeholder="Search for name day by country"
+            />
+            <input
+              type="submit"
+              id="search"
+              name="search"
+              class="btn btn-light"
+              value="🔍"
+            />
+          </div>
 
           <div id="query-options">
             <div class="form-check form-check-inline">
@@ -40,11 +87,11 @@
                 class="form-check-input"
                 type="radio"
                 name="search_for"
-                id="all"
-                value="all"
+                id="Denmark"
+                value="Denmark"
                 checked
               />
-              <label class="form-check-label" for="all">By name</label>
+              <label class="form-check-label" for="Denmark">🇩🇰</label>
             </div>
 
             <div class="form-check form-check-inline">
@@ -52,31 +99,250 @@
                 class="form-check-input"
                 type="radio"
                 name="search_for"
-                id="artists"
-                value="artists"
+                id="Sweden"
+                value="Sweden"
               />
-              <label class="form-check-label" for="artists">By day</label>
+              <label class="form-check-label" for="Sweden">🇸🇪</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="search_for"
+                id="Finland"
+                value="Finland"
+              />
+              <label class="form-check-label" for="Finland">🇫🇮</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="search_for"
+                id="Czech"
+                value="Czech"
+              />
+              <label class="form-check-label" for="Czech">🇨🇿</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="search_for"
+                id="Poland"
+                value="Poland"
+              />
+              <label class="form-check-label" for="Poland">🇵🇱</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="search_for"
+                id="France"
+                value="France"
+              />
+              <label class="form-check-label" for="France">🇫🇷</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="search_for"
+                id="Hungary"
+                value="Hungary"
+              />
+              <label class="form-check-label" for="Hungary">🇭🇺</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="search_for"
+                id="Croatia"
+                value="Croatia"
+              />
+              <label class="form-check-label" for="Croatia">🇭🇷</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="search_for"
+                id="USA"
+                value="USA"
+              />
+              <label class="form-check-label" for="USA">🇺🇸</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="search_for"
+                id="Austria"
+                value="Austria"
+              />
+              <label class="form-check-label" for="Austria">🇦🇹</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="search_for"
+                id="Italy"
+                value="Italy"
+              />
+              <label class="form-check-label" for="Italy">🇮🇹</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="search_for"
+                id="Spain"
+                value="Spain"
+              />
+              <label class="form-check-label" for="Spain">🇪🇸</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="search_for"
+                id="Germany"
+                value="Germany"
+              />
+              <label class="form-check-label" for="Germany">🇩🇪</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="search_for"
+                id="Slovakia"
+                value="Slovakia"
+              />
+              <label class="form-check-label" for="Slovakia">🇸🇰</label>
             </div>
           </div>
         </form>
-
         <div
           id="search-results"
           class="row row-cols-1 row-cols-md-2 row-cols-lg-3"
-        >
+        ></div>
+      </div>
+    </div>
+
+  <!-- Efter speciell tidszon  -->
+  <div class="input-group mb-2">
+    <select class="custom-select" id="inputGroupSelect01" class="timezone">
+      <option selected>Search name day by time zone</option>
+      <option value="Zone1">Europe</option>
+      <option value="Zone2">America</option>
+    </select>
+
+    <input type="submitdate" id="search" name="search" class="btn btn-light" value="🔍" />
+  
+  </div>
+
+   
+  <!-- Sök efter specifikt datum  -->
+
+  <div class="container date">
+    <div id="nameday">
+      <form id="search-form">
+      
+  
+<div class="input-group mb-3">
+  <select class="custom-select" id="inputGroupSelect02">
+    <option selected>Month</option>
+    <option value="1">January</option>
+    <option value="2">February</option>
+    <option value="3">March</option>
+    <option value="4">April</option>
+    <option value="5">May</option>
+    <option value="6">June</option>
+    <option value="7">July</option>
+    <option value="8">August</option>
+    <option value="9">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option>
+  </select>
+
+  <select class="custom-select" id="inputGroupSelect02">
+    <option selected>Day</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+  </select>
+
+  <input type="submitdate" id="search" name="search" class="btn btn-light" value="🔍" />
+  
+      <div id="search-results" class="row row-cols-1 row-cols-md-2 row-cols-lg-3"></div>
+    </div>
+  </div>
+
+<container id="card-result"> 
+        <div id="search-results" class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
           <div class="col mb-4">
             <div class="card bg-light text-dark">
-              <img src="assets/images/DJI_0059.jpg" class="card-img-top" />
-              <div class="card-body">
+              <img src="assets/images/color2.jpg" class="card-img-top" />
+              <div class="card-body details">
                 <h5 class="card-title">6 February</h5>
                 <p class="card-text">Dorotea, Doris</p>
-                <p class="card-text">Sweden</p>
+                <p class="card-text">Time-zone</p>
+                <p class="card-country">Country</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+</container>
+
+        
+
+     
+  
 
     <script src="/assets/javascript/namnsdag.js"></script>
     <script src="/assets/javascript/app.js"></script>

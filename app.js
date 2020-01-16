@@ -1,42 +1,19 @@
-const contries = [
-  "cz",
-  "sk",
-  "pl",
-  "fr",
-  "hu",
-  "hr",
-  "se",
-  "us",
-  "at",
-  "it",
-  "es",
-  "de",
-  "dk",
-  "fi"
-];
+const details = document.querySelector(".details");
 
-const timezones = [
-  "America/Denver",
-  "America/Costa_Rica",
-  "America/Los_Angeles",
-  "America/St_Vincent",
-  "America/Toronto",
-  "Europe/Amsterdam",
-  "Europe/Monaco",
-  "Europe/Prague",
-  "Europe/Isle_of_Man",
-  "Africa/Cairo",
-  "Africa/Johannesburg",
-  "Africa/Nairobi",
-  "Asia/Yakutsk",
-  "Asia/Hong_Kong",
-  "Asia/Taipei",
-  "Pacific/Midway",
-  "Pacific/Honolulu",
-  "Etc/GMT-6",
-  "US/Samoa",
-  "Zulu",
-  "US/Hawaii",
-  "Israel",
-  "Etc/GMT-2"
-];
+// Update UI to the DOM
+
+document.querySelector("#search-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  console.log();
+  dayName(this.query.value.trim())
+    .then(name => {
+      console.log("Got data back", name);
+    })
+    .catch(error => {
+      console.info("You got an error", error);
+    });
+});
+
+details.innerHTML = `<h5 class="card-title">${name.results}</h5>
+                <p class="card-text">${name.results}</p>
+                <p class="card-text">Sweden</p>`;
